@@ -13,6 +13,7 @@
       overflow: hidden;
       font-family: Arial, sans-serif;
       transition: transform 0.3s ease;
+      display: none; /* Initially hidden */
     }
 
     /* Card Header */
@@ -61,7 +62,11 @@
 </head>
 <body>
 
-  <div class="card">
+  <!-- Button to Toggle Card Visibility -->
+  <button class="btn" id="toggleCardButton">Show Card</button>
+
+  <!-- The Card -->
+  <div class="card" id="card">
     <div class="card-header">
       My Awesome Card
     </div>
@@ -74,6 +79,24 @@
       <p>Footer Text</p>
     </div>
   </div>
+
+  <script>
+    // Get elements
+    const toggleCardButton = document.getElementById('toggleCardButton');
+    const card = document.getElementById('card');
+
+    // Add event listener to the button
+    toggleCardButton.addEventListener('click', function() {
+      // Toggle the visibility of the card
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block'; // Show the card
+        toggleCardButton.textContent = 'Hide Card'; // Change button text
+      } else {
+        card.style.display = 'none'; // Hide the card
+        toggleCardButton.textContent = 'Show Card'; // Change button text
+      }
+    });
+  </script>
 
 </body>
 </html>
