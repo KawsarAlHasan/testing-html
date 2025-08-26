@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Example</title>
+  <style>
+    /* Card Container */
+    .card {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      transition: transform 0.3s ease;
+    }
+
+    /* Card Header */
+    .card-header {
+      background-color: #4F85AA;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    /* Card Body */
+    .card-body {
+      padding: 20px;
+      background-color: #F8F9FB;
+      color: #333;
+    }
+
+    /* Card Footer */
+    .card-footer {
+      background-color: #E5EDF2;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Hover Effect */
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Button Styling */
+    .btn {
+      background-color: #4F85AA;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #319EE1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      My Awesome Card
+    </div>
+    <div class="card-body">
+      <h3>Card Title</h3>
+      <p>This is a description of the card. It contains some text to explain the content of the card.</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+    <div class="card-footer">
+      <p>Footer Text</p>
+    </div>
+  </div>
+
+</body>
+</html>
